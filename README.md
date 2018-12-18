@@ -8,6 +8,7 @@ This project is a basic "Hello world" example, intended as a template. The gist:
 
 * Create a `Dockerfile` and a command to build it
 * Create a docker command to run your tests
+* Sign up for Travis CI and link it to your Github account
 * Add a `DOCKER_PASS` environment variable to Travis
 * Make a commit containing a `.travis.yml`
 * The travis job should:
@@ -15,11 +16,11 @@ This project is a basic "Hello world" example, intended as a template. The gist:
     - test the image
     - and if the travis job is a push to master, it's considered a release
         - log into Dockerhub
-        - tag the image
+        - tag the image (`latest` and `YYYMMMDD-GITSHA`)
         - push it
 
-Check your Dockerhub repository and you should see *two* tagged images per release (`latest`, and a `YYYMMMDD-GITSHA` tag)
+Check your Dockerhub repository and you should see *two* tagged images per release. See https://hub.docker.com/r/perrygeo/travis-test 
 
 Forked from https://sebest.github.io/post/using-travis-ci-to-build-docker-images/
-and ultimately went in a completely different direction based on modern Travis docs.
+and ultimately went in a different direction based on recent Travis docs.
 
