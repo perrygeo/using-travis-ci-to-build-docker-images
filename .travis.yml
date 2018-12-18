@@ -9,7 +9,7 @@ env:
     - REPO=perrygeo/travis-test   # Dockerhub repository name, not github
     - COMMIT=${TRAVIS_COMMIT::8}
     - DATE=`date +%Y%m%d`
-    - TAG="$REPO:$DATE-COMMIT"
+    - TAG="$REPO:$DATE-$COMMIT"
 
 before_install:
     - docker build -f Dockerfile -t $TAG .
