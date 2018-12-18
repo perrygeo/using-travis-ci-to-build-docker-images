@@ -1,5 +1,7 @@
 # Basic example of a Docker build system
 
+[![Build Status](https://travis-ci.com/perrygeo/using-travis-ci-to-build-docker-images.svg?branch=master)](https://travis-ci.com/perrygeo/using-travis-ci-to-build-docker-images)
+
 Using Github, Travis, and Dockerhub, it's possible to
 build a reliable continuous integration system for Docker images.
 The cost can be $0 if your project is open source.
