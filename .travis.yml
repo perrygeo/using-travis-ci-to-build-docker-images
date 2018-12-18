@@ -3,10 +3,9 @@ services:
 
 env:
   global:
-    # The following secrets must be set
-    # DOCKER_EMAIL
-    # DOCKER_USER
+    # The following secret must be set
     # DOCKER_PASS
+    - DOCKER_USER=perrygeo
     - REPO=perrygeo/travis-test   # Dockerhub repository name, not github
     - COMMIT=${TRAVIS_COMMIT::8}
     - DATE=`date +%Y%m%d`
