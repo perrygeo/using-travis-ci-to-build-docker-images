@@ -3,6 +3,5 @@
 set -e
 
 echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-docker tag $REPO:$COMMIT $REPO:latest
-docker tag $REPO:$COMMIT $REPO:$DATE
+docker tag $TAG $REPO:latest
 docker push $REPO
