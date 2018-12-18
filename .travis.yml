@@ -7,10 +7,11 @@ env:
     # DOCKER_PASS
     - DOCKER_USER=perrygeo
     - REPO=perrygeo/travis-test   # Dockerhub repository name, not github
-    - COMMIT=${TRAVIS_COMMIT}
+    - COMMIT=${TRAVIS_COMMIT::8}
+    - DATE=`date +%Y%m%d`
 
 before_install:
-    - docker build -f Dockerfile -t $REPO:$COMMIT .
+    - docker build -f Dockerfile -t $REPO:$DATE-COMMIT .
 
 script:
     - docker run -it --rm $REPO:$COMMIT cat /hi.txt
